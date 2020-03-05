@@ -4,6 +4,7 @@ import it.rics.exceptions.NotSanitizedException;
 
 import java.io.File;
 import java.sql.*;
+import java.util.Arrays;
 
 public class Database {
 
@@ -30,15 +31,10 @@ public class Database {
     Password = password;
   }
 
-  public void connect(String filename) throws ClassNotFoundException, SQLException {
-    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-
-    String path = getClass().getClassLoader().getResource(filename).getPath();
-    String format = filename.split(".")[1];
-
-    System.out.println("Acess format: " + format );
+  public void connect(String filename) throws  SQLException {
+    String path = getClass().getClassLoader().getResource(filename).getFile();
     System.out.println("path to Access db: " + path );
-    String database = "jdbc:odbc:Driver={Microsoft Access Driver (*."+ format +")}; DBQ="+ path + ";";
+    String database ="jdbc:ucanaccess:/"+path;
     connection = DriverManager.getConnection(database, Username, Password);
   }
 

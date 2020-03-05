@@ -20,5 +20,12 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.ucanaccess</groupId>
+            <artifactId>ucanaccess</artifactId>
+            <version>4.0.4</version>
+        </dependency>
+    </dependencies>
 
 </project>

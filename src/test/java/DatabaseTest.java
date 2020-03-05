@@ -18,7 +18,7 @@ public class DatabaseTest {
       while (r.next()){
         System.out.println("risultato: " + r.getInt(1));
       }
-    } catch (ClassNotFoundException | SQLException | NotSanitizedException e) {
+    } catch ( SQLException | NotSanitizedException e) {
       e.printStackTrace();
     }
   }
