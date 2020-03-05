@@ -13,8 +13,8 @@ public class DatabaseTest {
             .withPassword("")
             .build();
     try {
-      database.connect("file.mdb");
-      ResultSet r = database.query("SELECT * FROM Prova");
+      database.connect("Maturita.accdb");
+      ResultSet r = database.query("SELECT * FROM Argomento");
       while (r.next()){
         System.out.println("risultato: " + r.getInt(1));
       }
