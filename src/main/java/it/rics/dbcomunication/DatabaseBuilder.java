@@ -8,7 +8,7 @@ public final class DatabaseBuilder {
   }
 
   public static DatabaseBuilder newDatabase() {
-    return new DatabaseBuilder();
+    return new DatabaseBuilder().withUsername("").withPassword("");
   }
 
   public DatabaseBuilder withUsername(String Username) {

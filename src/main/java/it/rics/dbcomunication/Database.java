@@ -38,6 +38,19 @@ public class Database {
     connection = DriverManager.getConnection(database, Username, Password);
   }
 
+  public boolean isConnected(){
+    if(connection != null){
+      try {
+        if(!connection.isClosed()){
+          return true;
+        }
+      } catch (SQLException e) {
+        return false;
+      }
+    }
+    return false;
+  }
+
   public ResultSet query(String qr) throws SQLException, NotSanitizedException {
 
     Statement st = connection.createStatement();
@@ -68,5 +81,9 @@ public class Database {
     if(qr.contains("--") || qr.contains("/*") || qr.contains(";"))
       return false;
     return true;
+  }
+
+  public void close() throws SQLException {
+    connection.close();
   }
 }

@@ -14,9 +14,9 @@ public class DatabaseTest {
             .build();
     try {
       database.connect("Maturita.accdb");
-      ResultSet r = database.query("SELECT * FROM Materia");
+      ResultSet r = database.query("SELECT NomeMateria FROM Materia");
       while (r.next()){
-        System.out.println("risultato: " + r.getInt(1));
+        System.out.println("risultato: " + r.getString(1));
       }
     } catch ( SQLException | NotSanitizedException e)
     {
