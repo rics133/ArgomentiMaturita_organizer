@@ -14,11 +14,12 @@ public class DatabaseTest {
             .build();
     try {
       database.connect("Maturita.accdb");
-      ResultSet r = database.query("SELECT * FROM Argomento");
+      ResultSet r = database.query("SELECT * FROM Materia");
       while (r.next()){
         System.out.println("risultato: " + r.getInt(1));
       }
-    } catch ( SQLException | NotSanitizedException e) {
+    } catch ( SQLException | NotSanitizedException e)
+    {
       e.printStackTrace();
     }
   }
