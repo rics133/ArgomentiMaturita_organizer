@@ -1,23 +1,25 @@
 package it.rics.app;
 
-public class Argomenti {
-  private int id;
+public class Argomento {
   private String NomeArgomento;
   private String Riferimento;
 
-  public Argomenti(int id, String nomeArgomento, String riferimento) {
-    this.id = id;
+  public String getMateria() {
+    return Materia;
+  }
+
+  public void setMateria(String materia) {
+    Materia = materia;
+  }
+
+  private String Materia;
+
+  public Argomento(String nomeArgomento, String riferimento, String materia) {
     NomeArgomento = nomeArgomento;
     Riferimento = riferimento;
+    Materia = materia;
   }
 
-  public int getId() {
-    return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
-  }
 
   public String getNomeArgomento() {
     return NomeArgomento;

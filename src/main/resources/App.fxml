@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #60befc;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.rics.app.controller">
+<AnchorPane prefHeight="459.0" prefWidth="600.0" style="-fx-background-color: #60befc;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.rics.app.controller">
    <children>
-      <Pane layoutX="200.0" layoutY="106.0" prefHeight="286.0" prefWidth="200.0" style="-fx-background-color: #3488bf;">
+      <Pane layoutX="200.0" layoutY="106.0" prefHeight="333.0" prefWidth="200.0" style="-fx-background-color: #3488bf;">
          <children>
             <ListView fx:id="List" layoutX="16.0" layoutY="32.0" onMouseClicked="#onListClicked" prefHeight="222.0" prefWidth="168.0" />
             <Label fx:id="Title" alignment="CENTER" layoutX="35.0" layoutY="3.0" prefHeight="23.0" prefWidth="131.0" text="Materie" textFill="WHITE">
@@ -15,8 +15,9 @@
                   <Font name="Constantia Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="button" layoutX="115.0" layoutY="260.0" mnemonicParsing="false" onAction="#onButtonClick" text="Indietro" />
+            <Button fx:id="button" layoutX="72.0" layoutY="294.0" mnemonicParsing="false" onAction="#onButtonClick" text="Indietro" />
             <Button fx:id="Aggiungi" layoutX="26.0" layoutY="260.0" mnemonicParsing="false" onAction="#onAddClick" text="Aggiungi" />
+            <Button fx:id="Removebut" layoutX="114.0" layoutY="260.0" mnemonicParsing="false" onAction="#onRemoveClick" text="Rimuovi" />
          </children>
       </Pane>
       <ImageView fitHeight="77.0" fitWidth="364.0" layoutX="151.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
